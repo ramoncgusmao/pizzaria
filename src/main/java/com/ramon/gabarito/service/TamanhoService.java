@@ -1,6 +1,7 @@
 package com.ramon.gabarito.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import javax.validation.Valid;
 
@@ -23,6 +24,15 @@ public class TamanhoService {
 	public List<Tamanho> list() {
 		// TODO Auto-generated method stub
 		return tamanhoRepository.findAll();
+	}
+
+	public Tamanho find(Integer idTamanho) {
+	Optional<Tamanho> tamanho= tamanhoRepository.findById(idTamanho);
+		
+		if(tamanho.isPresent()) {
+			return tamanho.get();
+		}
+		return null;
 	}
 
 

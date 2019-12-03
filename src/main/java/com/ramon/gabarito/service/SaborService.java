@@ -1,6 +1,7 @@
 package com.ramon.gabarito.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import javax.validation.Valid;
 
@@ -25,6 +26,16 @@ public class SaborService {
 	public List<Sabor> list() {
 		// TODO Auto-generated method stub
 		return saborRepository.findAll();
+	}
+
+	public Sabor find(int idSabor) {
+		
+		Optional<Sabor> sabor= saborRepository.findById(idSabor);
+		
+		if(sabor.isPresent()) {
+			return sabor.get();
+		}
+		return null;
 	}
 
 }

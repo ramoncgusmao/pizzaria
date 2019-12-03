@@ -13,6 +13,8 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -20,8 +22,10 @@ import lombok.ToString;
 
 @Getter
 @NoArgsConstructor
+@AllArgsConstructor
 @ToString
 @EqualsAndHashCode
+@Builder
 @Entity
 @Table(name = "PZ04_PEDIDO")
 public class Pedido {
@@ -90,6 +94,7 @@ public class Pedido {
 		return;
 	}
 	
+
 
 	
 	

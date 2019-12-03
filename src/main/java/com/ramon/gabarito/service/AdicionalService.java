@@ -1,6 +1,7 @@
 package com.ramon.gabarito.service;
 
 import java.util.List;
+import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -20,6 +21,11 @@ public class AdicionalService {
 
 	public List<Adicional> list() {
 		return adicionalRepository.findAll();
+	}
+
+	public Set<Adicional> findList(List<Integer> adicionais) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	
